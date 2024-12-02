@@ -1,6 +1,6 @@
 import fs from "fs";
 
-export function read(filePath) {
+const read = (filePath) => {
   try {
     const data = fs.readFileSync(filePath, "utf8");
     return data;
@@ -10,11 +10,11 @@ export function read(filePath) {
   }
 }
 
-function splitIntoLines(text) {
+const splitIntoLines = (text) => {
   return text.split('\n')
 }
 
-function splitByLine(line, separator) {
+const splitByLine = (line, separator) => {
   return line.split(separator)
 }
 

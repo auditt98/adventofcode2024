@@ -2,7 +2,7 @@ import fileHelper from '../utils/fileHelper.js';
 const inputFile = './input.txt';
 const testFile = './test.txt'
 
-function setup() {
+const setup = () => {
 	let input = fileHelper.read(inputFile)
 	const list1 = []
 	const list2 = []
@@ -19,13 +19,13 @@ function setup() {
 	}
 }
 
-function run() {
+const run = () => {
 	const data = setup();
 	problem1(data);
 	problem2(data);
 }
 
-function problem1(data) {
+const problem1 = (data) => {
 	const sortedList1 = data.list1.sort()
 	const sortedList2 = data.list2.sort()
 	const result = sortedList1.map((x, i) => {
@@ -38,7 +38,7 @@ function problem1(data) {
 	return result
 }
 
-function problem2(data) {
+const problem2 = (data) => {
 	const dict2 = {}
 	data.list2.forEach(item => {
 		if (dict2[item]) {
